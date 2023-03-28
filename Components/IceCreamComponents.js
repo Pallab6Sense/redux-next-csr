@@ -2,7 +2,7 @@ import { buyIceCream } from '@/Redux';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-function Button(props) {
+const Button = props => {
   return (
     <button
       onClick={() => {
@@ -12,7 +12,7 @@ function Button(props) {
       Buy IceCream
     </button>
   );
-}
+};
 
 function IceCreamComponents() {
     let numOfIceCreams;

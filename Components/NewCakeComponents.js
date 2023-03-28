@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { buyCake } from '../Redux';
 
-function Button(props) {
+const Button = props => {
   return (
     <button onClick={() => props.dispatch(buyCake(props.number))}>
       Buy {props.number} Cake
     </button>
   );
-}
+};
 
-function CakeInput(props) {
+const CakeInput = props => {
   return (
     <input
       type="text"
@@ -18,7 +18,7 @@ function CakeInput(props) {
       onChange={(e) => props.setNumber(e.target.value)}
     />
   );
-}
+};
 
 function NewCakeComponents() {
   const numOfCakes = useSelector((state) => state.cake.numOfCakes);
